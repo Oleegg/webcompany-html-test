@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800;900&family=Lexend:wght@200;400;700&family=Merriweather:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&family=PT+Sans:wght@400;700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>test</title>
+</head>
+
+<body class="wrapper">
+  <header class="header-wrapper">
+    <div class="content header">
+      <div class="header__logo">
+        <h1 class="logo">ЛОГОТИП</h1>
+        <a class="phone" href="tel:88007775050">8 800 777 50 50</a>
+        <div class="search">
+          <svg class="search__svg" width="13" height="13">
+            <use xlink:href="./images/sprite.svg#search"></use>
+          </svg>
+          <input class="search__input" type="search" placeholder="Поиск товаров">
+        </div>
+      </div>
+      <a href="#" class="delivery">Доставка и оплата</a>
+
+    </div>
+  </header>
+  <div class="menu-wrapper">
+    <div class="content menu">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li>МОБИЛЬНЫЕ ТЕЛЕФОНЫ</li>
+          <li>ПЛАНШЕТЫ</li>
+          <li>ФОТОТЕХНИКА</li>
+          <li>НОУТБУКИ</li>
+          <li>ТЕЛЕВИЗОРЫ</li>
+        </ul>
+      </nav>
+      <div class="basket">
+        <svg class="search__svg" width="17" height="16">
+          <use xlink:href="./images/sprite.svg#basket"></use>
+        </svg>КОРЗИНА
+      </div>
+    </div>
+  </div>
+  <main class="main">
+
+    <section class="content filters">
+      <div class="select types" data-state="">
+        <div class="select__title types__title" data-default="Option 0">Любого логотипа
+          <svg class="arrow__svg" width="11" height="6">
+            <use xlink:href="./images/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+        <div class="select__content filters__types__content">
+          <input id="types0" class="select__input" type="radio" name="types" checked />
+          <label for="types0" class="select__label-types select__label select-border">Любого логотипа</label>
+          <input id="types1" class="select__input" type="radio" name="types" />
+          <label for="types1" class="select__label-types select__label">Компакт-камера</label>
+          <input id="types2" class="select__input" type="radio" name="types" />
+          <label for="types2" class="select__label-types select__label">Беззеркальная</label>
+          <input id="types3" class="select__input" type="radio" name="types" />
+          <label for="types3" class="select__label-types select__label">Зеркальная</label>
+          <input id="types4" class="select__input" type="radio" name="types" />
+          <label for="types4" class="select__label-types select__label">Среднеформатная</label>
+        </div>
+      </div>
+      <div class="select brand" data-state="">
+        <div class="select__title brand__title" data-default="Option 0">Любого логотипа
+          <svg class="arrow__svg" width="11" height="6">
+            <use xlink:href="./images/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+        <div class="select__content brand__content">
+          <input id="brand0" class="select__input" type="radio" name="brand" checked />
+          <label for="brand0" class="select__label-brand select__label select-border">Любого логотипа</label>
+          <input id="brand1" class="select__input" type="radio" name="brand" />
+          <label for="brand1" class="select__label-brand select__label">Компакт-камера</label>
+          <input id="brand2" class="select__input" type="radio" name="brand" />
+          <label for="brand2" class="select__label-brand select__label">Беззеркальная</label>
+          <input id="brand3" class="select__input" type="radio" name="brand" />
+          <label for="brand3" class="select__label-brand select__label">Зеркальная</label>
+          <input id="brand4" class="select__input" type="radio" name="brand" />
+          <label for="brand4" class="select__label-brand select__label">Среднеформатная</label>
+        </div>
+      </div>
+      <div class="filters__price">
+        <p>ПО ЦЕНЕ</p>
+        <label>ОТ<input type="text" placeholder="500 000"></label>
+        <label>ОТ<input type="text" placeholder="25 000 000"></label>
+
+      </div>
+    </section>
+    <section class="content filters">cards</section>
+
+  </main>
+  <script src="./index.js"></script>
+</body>
+
+</html>
