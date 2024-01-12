@@ -57,6 +57,8 @@ body {
   border-bottom: 1px solid #517dae;
 
   &__svg {
+    margin-top: -3px;
+    margin-left: 2px;
     fill: #fff;
     margin-right: 7px;
   }
@@ -89,9 +91,9 @@ body {
 
 .nav__list {
   display: flex;
-  padding: 0;
+  padding: 13px 0;
   gap: 39px;
-
+  margin: 0;
   li {
     list-style: none;
   }
@@ -100,8 +102,12 @@ body {
 .filters {
   display: flex;
   padding: 25px 0;
+  &__select {
+    display: flex;
+    gap: 14px;
+  }
 }
-// -----------------types------------filters start
+// -----------------------------select start
 .select {
   position: relative;
   width: 264px;
@@ -116,7 +122,8 @@ body {
       max-height: 40px;
     }
   }
-  &__title {
+
+  &__title-wrapper {
     display: flex;
     align-items: center;
     width: 100%;
@@ -127,6 +134,7 @@ body {
 
     cursor: pointer;
   }
+
   &__content {
     position: absolute;
     top: 47px;
@@ -151,37 +159,17 @@ body {
 
 .select__input {
   display: none;
-
-  &:checked + label {
-    background-color: #dedede;
-  }
-  &:disabled + label {
-    opacity: 0.6;
-    pointer-events: none;
-  }
 }
+
 .select__label {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40px;
-  max-height: 0;
-  padding: 0 16px;
-
-  transition: all 0.2s ease-out;
-
+  height: 48px;
+  padding: 14px 17px;
   cursor: pointer;
-
-  overflow: hidden;
-
-  & + input + & {
-    border-top: 0 solid #c7ccd160;
-  }
-
   &:hover {
-    // background-color: #d8093a !important;
-
-    color: #ffffff;
+    background-color: #e8eeff;
   }
 }
 
@@ -190,9 +178,64 @@ body {
   width: 230px;
   margin: 0 auto;
 }
-// ---------------type--------------filters end
+
 .arrow__svg {
   margin-left: auto;
   line-height: 0.5;
 }
+// -----------------------------select end
+// -----------------------------price start
+.price {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-left: 27px;
+  &__input {
+    border: none;
+    text-align: end;
+    padding-left: 10px;
+    max-width: 96px;
+    font-weight: bold;
+  }
+  &__input:focus {
+    outline: none !important;
+  }
+  &__input::placeholder {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px 0 11px;
+
+    transition: all 0.2s ease-out;
+    border: solid 1px #c7ccd1;
+    font-size: 12px;
+    cursor: pointer;
+
+    overflow: hidden;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 9px 0 14px;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+// -----------------------------price end
+
 // -----------------------------filters end

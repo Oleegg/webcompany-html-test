@@ -57,6 +57,8 @@ body {
   border-bottom: 1px solid #517dae;
 }
 .search__svg {
+  margin-top: -3px;
+  margin-left: 2px;
   fill: #fff;
   margin-right: 7px;
 }
@@ -89,8 +91,9 @@ body {
 
 .nav__list {
   display: flex;
-  padding: 0;
+  padding: 13px 0;
   gap: 39px;
+  margin: 0;
 }
 .nav__list li {
   list-style: none;
@@ -99,6 +102,10 @@ body {
 .filters {
   display: flex;
   padding: 25px 0;
+}
+.filters__select {
+  display: flex;
+  gap: 14px;
 }
 
 .select {
@@ -112,7 +119,7 @@ body {
 .select[data-state=active] .select__label + .select__input + .select__label {
   max-height: 40px;
 }
-.select__title {
+.select__title-wrapper {
   display: flex;
   align-items: center;
   width: 100%;
@@ -140,30 +147,17 @@ body {
 .select__input {
   display: none;
 }
-.select__input:checked + label {
-  background-color: #dedede;
-}
-.select__input:disabled + label {
-  opacity: 0.6;
-  pointer-events: none;
-}
 
 .select__label {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40px;
-  max-height: 0;
-  padding: 0 16px;
-  transition: all 0.2s ease-out;
+  height: 48px;
+  padding: 14px 17px;
   cursor: pointer;
-  overflow: hidden;
-}
-.select__label + input + .select__label {
-  border-top: 0 solid rgba(199, 204, 209, 0.3764705882);
 }
 .select__label:hover {
-  color: #ffffff;
+  background-color: #e8eeff;
 }
 
 .select-border {
@@ -175,4 +169,59 @@ body {
 .arrow__svg {
   margin-left: auto;
   line-height: 0.5;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-left: 27px;
+}
+.price__input {
+  border: none;
+  text-align: end;
+  padding-left: 10px;
+  max-width: 96px;
+  font-weight: bold;
+}
+.price__input:focus {
+  outline: none !important;
+}
+.price__input::-moz-placeholder {
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.price__input::placeholder {
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.price__label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px 0 11px;
+  transition: all 0.2s ease-out;
+  border: solid 1px #c7ccd1;
+  font-size: 12px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.price__content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 9px 0 14px;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
 }

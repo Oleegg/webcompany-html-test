@@ -52,49 +52,67 @@
   <main class="main">
 
     <section class="content filters">
-      <div class="select types" data-state="">
-        <div class="select__title types__title" data-default="Option 0">Любого логотипа
-          <svg class="arrow__svg" width="11" height="6">
-            <use xlink:href="./images/sprite.svg#arrow"></use>
-          </svg>
+      <div class="filters__select">
+        <div class="select types" data-state="">
+          <div class="select__title-wrapper types__title-wrapper">
+            <div class="select__title types__title" data-default="Option 0">Любого логотипа
+            </div>
+            <svg class="arrow__svg" width="11" height="6">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="select__content filters__types__content">
+            <div class="select-border"></div>
+            <input id="types0" class="select__input" type="radio" name="types" checked />
+            <label for="types0" class="select__label-types select__label">Любого логотипа</label>
+            <input id="types1" class="select__input" type="radio" name="types" />
+            <label for="types1" class="select__label-types select__label">Компакт-камера</label>
+            <input id="types2" class="select__input" type="radio" name="types" />
+            <label for="types2" class="select__label-types select__label">Беззеркальная</label>
+            <input id="types3" class="select__input" type="radio" name="types" />
+            <label for="types3" class="select__label-types select__label">Зеркальная</label>
+            <input id="types4" class="select__input" type="radio" name="types" />
+            <label for="types4" class="select__label-types select__label">Среднеформатная</label>
+          </div>
         </div>
-        <div class="select__content filters__types__content">
-          <input id="types0" class="select__input" type="radio" name="types" checked />
-          <label for="types0" class="select__label-types select__label select-border">Любого логотипа</label>
-          <input id="types1" class="select__input" type="radio" name="types" />
-          <label for="types1" class="select__label-types select__label">Компакт-камера</label>
-          <input id="types2" class="select__input" type="radio" name="types" />
-          <label for="types2" class="select__label-types select__label">Беззеркальная</label>
-          <input id="types3" class="select__input" type="radio" name="types" />
-          <label for="types3" class="select__label-types select__label">Зеркальная</label>
-          <input id="types4" class="select__input" type="radio" name="types" />
-          <label for="types4" class="select__label-types select__label">Среднеформатная</label>
+        <div class="select brand" data-state="">
+          <div class="select__title-wrapper brand__title-wrapper">
+            <div class="select__title brand__title" data-default="Option 0">Любого бренда
+            </div>
+            <svg class="arrow__svg" width="11" height="6">
+              <use xlink:href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </div>
+          <div class="select__content brand__content">
+            <div class="select-border"></div>
+            <input id="brand0" class="select__input" type="radio" name="brand" checked />
+            <label for="brand0" class="select__label-brand select__label">Любого бренда</label>
+            <input id="brand1" class="select__input" type="radio" name="brand" />
+            <label for="brand1" class="select__label-brand select__label">Canon</label>
+            <input id="brand2" class="select__input" type="radio" name="brand" />
+            <label for="brand2" class="select__label-brand select__label">Nikon</label>
+            <input id="brand3" class="select__input" type="radio" name="brand" />
+            <label for="brand3" class="select__label-brand select__label">Sony</label>
+            <input id="brand4" class="select__input" type="radio" name="brand" />
+            <label for="brand4" class="select__label-brand select__label">Fujifilm</label>
+            <input id="brand5" class="select__input" type="radio" name="brand" />
+            <label for="brand5" class="select__label-brand select__label">Samsung</label>
+            <input id="brand6" class="select__input" type="radio" name="brand" />
+            <label for="brand6" class="select__label-brand select__label">Olympus</label>
+          </div>
         </div>
       </div>
-      <div class="select brand" data-state="">
-        <div class="select__title brand__title" data-default="Option 0">Любого логотипа
-          <svg class="arrow__svg" width="11" height="6">
-            <use xlink:href="./images/sprite.svg#arrow"></use>
-          </svg>
+      <div class="price">
+        <p class="price__text">ПО ЦЕНЕ</p>
+        <div class="price__content">
+          <label class="price__label">ОТ
+            <input class="price__input" type="number" placeholder="500 000">
+          </label>
+          <label class="price__label">ОТ
+            <input class="price__input" type="number" placeholder="25 000 000">
+          </label>
         </div>
-        <div class="select__content brand__content">
-          <input id="brand0" class="select__input" type="radio" name="brand" checked />
-          <label for="brand0" class="select__label-brand select__label select-border">Любого логотипа</label>
-          <input id="brand1" class="select__input" type="radio" name="brand" />
-          <label for="brand1" class="select__label-brand select__label">Компакт-камера</label>
-          <input id="brand2" class="select__input" type="radio" name="brand" />
-          <label for="brand2" class="select__label-brand select__label">Беззеркальная</label>
-          <input id="brand3" class="select__input" type="radio" name="brand" />
-          <label for="brand3" class="select__label-brand select__label">Зеркальная</label>
-          <input id="brand4" class="select__input" type="radio" name="brand" />
-          <label for="brand4" class="select__label-brand select__label">Среднеформатная</label>
-        </div>
-      </div>
-      <div class="filters__price">
-        <p>ПО ЦЕНЕ</p>
-        <label>ОТ<input type="text" placeholder="500 000"></label>
-        <label>ОТ<input type="text" placeholder="25 000 000"></label>
-
+        <p class="price__text">РУБЛЕЙ</p>
       </div>
     </section>
     <section class="content filters">cards</section>
