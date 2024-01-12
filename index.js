@@ -1,3 +1,5 @@
+const body = document.querySelector("body");
+
 // types
 const types = document.querySelector(".types");
 const typesTitle = types.querySelector(".types__title-wrapper");
@@ -39,3 +41,37 @@ for (let i = 0; i < brandLabels.length; i++) {
     brand.setAttribute("data-state", "");
   });
 }
+
+const cards = document.querySelectorAll(".card");
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 1024) {
+    for (let i = 0; i < cards.length; i++) {
+      if (i > 6) {
+        cards[i].style.display = "none";
+      }
+    }
+  } else {
+    for (let i = 0; i < cards.length; i++) {
+      if (i > 6) {
+        cards[i].style.display = "flex";
+      }
+    }
+  }
+});
+
+// burger
+const burger = document.querySelector(".burger");
+const navList = document.querySelector(".nav__list");
+let count = 0;
+
+burger.addEventListener("click", () => navList.classList.toggle("open"));
+
+body.addEventListener("click", () => {
+  console.log(123);
+  if (navList.classList.contains("open") && count > 0) {
+    navList.classList.remove("open");
+    count = 0;
+  } else {
+    count++;
+  }
+});

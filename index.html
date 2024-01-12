@@ -18,39 +18,47 @@
   <header class="header-wrapper">
     <div class="content header">
       <div class="header__logo">
+        <div class="burger">
+          <div class="burger__content">
+            <div></div>
+          </div>
+        </div>
         <h1 class="logo">ЛОГОТИП</h1>
         <a class="phone" href="tel:88007775050">8 800 777 50 50</a>
         <div class="search">
           <svg class="search__svg" width="13" height="13">
             <use xlink:href="./images/sprite.svg#search"></use>
           </svg>
-          <input class="search__input" type="search" placeholder="Поиск товаров">
+          <input class="search__input" placeholder="Поиск товаров" aria-autocomplete="none">
         </div>
       </div>
       <a href="#" class="delivery">Доставка и оплата</a>
+      <svg class="basket__svg header__basket" width="20" height="20">
+        <use xlink:href="./images/sprite.svg#basket"></use>
+      </svg>
 
     </div>
   </header>
   <div class="menu-wrapper">
-    <div class="content menu">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li>МОБИЛЬНЫЕ ТЕЛЕФОНЫ</li>
-          <li>ПЛАНШЕТЫ</li>
-          <li>ФОТОТЕХНИКА</li>
-          <li>НОУТБУКИ</li>
-          <li>ТЕЛЕВИЗОРЫ</li>
-        </ul>
-      </nav>
-      <div class="basket">
-        <svg class="basket__svg" width="17" height="16">
-          <use xlink:href="./images/sprite.svg#basket"></use>
-        </svg>КОРЗИНА
+    <section class="menu-content">
+      <div class="content menu">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">МОБИЛЬНЫЕ ТЕЛЕФОНЫ</li>
+            <li class="nav__item">ПЛАНШЕТЫ</li>
+            <li class="nav__item">ФОТОТЕХНИКА</li>
+            <li class="nav__item">НОУТБУКИ</li>
+            <li class="nav__item">ТЕЛЕВИЗОРЫ</li>
+          </ul>
+        </nav>
+        <div class="basket">
+          <svg class="basket__svg" width="17" height="16">
+            <use xlink:href="./images/sprite.svg#basket"></use>
+          </svg>
+          <div class="basket__text">КОРЗИНА</div>
+        </div>
       </div>
-    </div>
-  </div>
-  <main class="main">
-
+    </section>
     <section class="content filters">
       <div class="filters__select">
         <div class="select types" data-state="">
@@ -115,6 +123,14 @@
         <p class="price__text">РУБЛЕЙ</p>
       </div>
     </section>
+
+    <svg class="settings" width="22" height="22">
+      <use xlink:href="./images/sprite.svg#settings"></use>
+    </svg>
+  </div>
+  <main class="main">
+
+
     <section class="content cards">
       <div class="big">
         <img class="big__img" src="./images/image 2.png" alt="camera">
